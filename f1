@@ -1,0 +1,22 @@
+/c/Users/sncu/OneDrive/Desktop/aws
+pipeline {
+    agent any
+    
+    stages {
+        stage('stage-1') {
+            steps {
+                sh 'touch file1'
+            }
+        }
+        stage('stage-2') {
+            steps {
+                echo '"hai all" > file1'
+            }
+        }
+        stage('stage-3') {
+            steps {
+                sh 'mv file1 raham'
+            }
+        }
+    }
+}
